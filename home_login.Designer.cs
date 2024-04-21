@@ -129,7 +129,6 @@
             label3.TabIndex = 6;
             label3.Text = "Username";
             label3.TextAlign = ContentAlignment.MiddleCenter;
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -142,7 +141,6 @@
             label2.TabIndex = 5;
             label2.Text = "GUILDMASTER";
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.Click += label2_Click;
             // 
             // label1
             // 

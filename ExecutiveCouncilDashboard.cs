@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SE
 {
-    public partial class StudentDashboard : Form
+    public partial class ExecutiveCouncilDashboard : Form
     {
-        public StudentDashboard()
+        public ExecutiveCouncilDashboard()
         {
             InitializeComponent();
         }

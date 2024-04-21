@@ -27,7 +27,7 @@ namespace SE
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            AdminDashboard form = new AdminDashboard();
             form.Visible = true;
             this.Close();
 

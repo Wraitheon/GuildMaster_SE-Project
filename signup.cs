@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
+using SE;
 
 
 namespace login
@@ -227,6 +228,14 @@ namespace login
             {
                 passwordErrorLabel.Text = "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character";
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Visible = false;
+
+            home_login home_Login = new home_login();
+            home_Login.Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace SE
 {
-    partial class StudentDashboard
+    partial class ExecutiveCouncilDashboard
     {
         /// <summary>
         /// Required designer variable.

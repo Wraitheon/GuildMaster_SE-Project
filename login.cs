@@ -87,7 +87,7 @@ namespace login
                             //F1.Show();
                             //this.Hide();
 
-                            StudentDashboard studentDash = new StudentDashboard();
+                            ExecutiveCouncilDashboard studentDash = new ExecutiveCouncilDashboard();
                             studentDash.Show();
                             this.Close();
 
@@ -132,7 +132,7 @@ namespace login
                         //F1.Show();
                         //this.Hide();
 
-                        StudentDashboard studentDash = new StudentDashboard();
+                        ExecutiveCouncilDashboard studentDash = new ExecutiveCouncilDashboard();
                         studentDash.Show();
                         this.Close();
 

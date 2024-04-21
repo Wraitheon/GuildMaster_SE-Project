@@ -43,12 +43,14 @@
             label4 = new Label();
             label2 = new Label();
             label1 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.Desktop;
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(emailTextBox);
             panel1.Controls.Add(passwordTextBox);
             panel1.Controls.Add(userNameTextBox);
@@ -63,7 +65,7 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Font = new Font("Lucida Sans Unicode", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            panel1.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             panel1.ForeColor = Color.Black;
             panel1.Location = new Point(0, 1);
             panel1.Margin = new Padding(2);
@@ -75,7 +77,7 @@
             // 
             emailTextBox.Location = new Point(315, 251);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(183, 35);
+            emailTextBox.Size = new Size(183, 38);
             emailTextBox.TabIndex = 22;
             emailTextBox.TextChanged += emailTextBox_TextChanged;
             // 
@@ -83,7 +85,7 @@
             // 
             passwordTextBox.Location = new Point(315, 209);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(183, 35);
+            passwordTextBox.Size = new Size(183, 38);
             passwordTextBox.TabIndex = 21;
             passwordTextBox.TextChanged += passwordTextBox_TextChanged;
             // 
@@ -91,7 +93,7 @@
             // 
             userNameTextBox.Location = new Point(315, 166);
             userNameTextBox.Name = "userNameTextBox";
-            userNameTextBox.Size = new Size(183, 35);
+            userNameTextBox.Size = new Size(183, 38);
             userNameTextBox.TabIndex = 20;
             userNameTextBox.TextChanged += userNameTextBox_TextChanged;
             // 
@@ -99,7 +101,7 @@
             // 
             lastNameTextBox.Location = new Point(315, 121);
             lastNameTextBox.Name = "lastNameTextBox";
-            lastNameTextBox.Size = new Size(183, 35);
+            lastNameTextBox.Size = new Size(183, 38);
             lastNameTextBox.TabIndex = 19;
             lastNameTextBox.TextChanged += lastNameTextBox_TextChanged;
             // 
@@ -107,7 +109,7 @@
             // 
             firstNameTextBox.Location = new Point(315, 75);
             firstNameTextBox.Name = "firstNameTextBox";
-            firstNameTextBox.Size = new Size(183, 35);
+            firstNameTextBox.Size = new Size(183, 38);
             firstNameTextBox.TabIndex = 18;
             firstNameTextBox.TextChanged += firstNameTextBox_TextChanged;
             // 
@@ -127,7 +129,7 @@
             roleComboBox.FormattingEnabled = true;
             roleComboBox.Location = new Point(315, 292);
             roleComboBox.Name = "roleComboBox";
-            roleComboBox.Size = new Size(183, 30);
+            roleComboBox.Size = new Size(183, 31);
             roleComboBox.TabIndex = 16;
             // 
             // label3
@@ -216,6 +218,16 @@
             label1.TabIndex = 1;
             label1.Text = "First Name";
             // 
+            // button1
+            // 
+            button1.Location = new Point(18, 16);
+            button1.Name = "button1";
+            button1.Size = new Size(27, 29);
+            button1.TabIndex = 23;
+            button1.Text = "<";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
             // signup
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -225,7 +237,6 @@
             Margin = new Padding(2);
             Name = "signup";
             Text = "signup";
-            //Load += signup_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -248,5 +259,6 @@
         private TextBox firstNameTextBox;
         private Label label7;
         private ComboBox roleComboBox;
+        private Button button1;
     }
 }

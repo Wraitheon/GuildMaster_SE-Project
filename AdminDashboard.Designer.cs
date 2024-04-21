@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp3
 {
-    partial class Form1
+    partial class AdminDashboard
     {
         /// <summary>
         /// Required designer variable.

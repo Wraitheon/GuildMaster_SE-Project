@@ -60,7 +60,7 @@ namespace SE
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StudentDashboard studentDash = new StudentDashboard();
+            ExecutiveCouncilDashboard studentDash = new ExecutiveCouncilDashboard();
             studentDash.Show();
             this.Close();
         }

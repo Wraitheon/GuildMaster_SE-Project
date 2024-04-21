@@ -8,13 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
-using SE;
 
 namespace WindowsFormsApp3
 {
-    public partial class Form1 : Form
+    public partial class AdminDashboard : Form
     {
-        public Form1()
+        public AdminDashboard()
         {
             InitializeComponent();
         }
@@ -43,7 +42,7 @@ namespace WindowsFormsApp3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            EventApproval eventApproval = new EventApproval();
+            AdminDashboard eventApproval = new AdminDashboard();
             eventApproval.Visible = true;
             this.Hide();
         }
