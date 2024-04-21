@@ -1,4 +1,6 @@
-namespace login
+using login;
+
+namespace SE
 {
     internal static class Program
     {
@@ -11,7 +13,7 @@ namespace login
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new welcome());
+            Application.Run(new signup());
         }
     }
 }
