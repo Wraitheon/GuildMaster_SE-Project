@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3
+﻿namespace SE
 {
     partial class AdminDashboard
     {
@@ -29,52 +29,57 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            label2 = new Label();
-            button1 = new Button();
-            button2 = new Button();
+            usernameLabel = new Label();
+            SocietyApprovalButton = new Button();
+            ViewApprovedSocieties = new Button();
             button3 = new Button();
             button4 = new Button();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Black;
             label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(336, 35);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(322, 35);
             label1.Name = "label1";
-            label1.Size = new Size(134, 25);
+            label1.Size = new Size(184, 25);
             label1.TabIndex = 0;
-            label1.Text = "Admin Panel";
+            label1.Text = "Admin Dashboard";
             // 
-            // label2
+            // usernameLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(358, 87);
-            label2.Name = "label2";
-            label2.Size = new Size(91, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Dashboard";
+            usernameLabel.AutoSize = true;
+            usernameLabel.BackColor = Color.Black;
+            usernameLabel.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            usernameLabel.ForeColor = Color.White;
+            usernameLabel.Location = new Point(365, 60);
+            usernameLabel.Name = "usernameLabel";
+            usernameLabel.Size = new Size(0, 20);
+            usernameLabel.TabIndex = 1;
             // 
-            // button1
+            // SocietyApprovalButton
             // 
-            button1.Location = new Point(85, 167);
-            button1.Name = "button1";
-            button1.Size = new Size(187, 45);
-            button1.TabIndex = 2;
-            button1.Text = "Society Approvals";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            SocietyApprovalButton.Location = new Point(85, 167);
+            SocietyApprovalButton.Name = "SocietyApprovalButton";
+            SocietyApprovalButton.Size = new Size(187, 45);
+            SocietyApprovalButton.TabIndex = 2;
+            SocietyApprovalButton.Text = "Society Approvals";
+            SocietyApprovalButton.UseVisualStyleBackColor = true;
+            SocietyApprovalButton.Click += SocietyApprovalButton_Click;
             // 
-            // button2
+            // ViewApprovedSocieties
             // 
-            button2.Location = new Point(320, 167);
-            button2.Name = "button2";
-            button2.Size = new Size(187, 45);
-            button2.TabIndex = 3;
-            button2.Text = "Society Mentor Approvals";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            ViewApprovedSocieties.Location = new Point(320, 167);
+            ViewApprovedSocieties.Name = "ViewApprovedSocieties";
+            ViewApprovedSocieties.Size = new Size(187, 45);
+            ViewApprovedSocieties.TabIndex = 3;
+            ViewApprovedSocieties.Text = "Approved Societies";
+            ViewApprovedSocieties.UseVisualStyleBackColor = true;
+            ViewApprovedSocieties.Click += ViewApprovedSocieties_Click;
             // 
             // button3
             // 
@@ -84,7 +89,6 @@
             button3.TabIndex = 4;
             button3.Text = "Event Approvals";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -94,34 +98,43 @@
             button4.TabIndex = 5;
             button4.Text = "Announcements";
             button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
             // 
-            // Form1
+            // panel1
+            // 
+            panel1.BackColor = Color.Black;
+            panel1.Controls.Add(usernameLabel);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(-2, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(831, 562);
+            panel1.TabIndex = 6;
+            // 
+            // AdminDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(828, 560);
             Controls.Add(button4);
             Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Name = "Form1";
+            Controls.Add(ViewApprovedSocieties);
+            Controls.Add(SocietyApprovalButton);
+            Controls.Add(panel1);
+            Name = "AdminDashboard";
             Text = "Form1";
-            Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.Button SocietyApprovalButton;
+        private System.Windows.Forms.Button ViewApprovedSocieties;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private Panel panel1;
     }
 }
 

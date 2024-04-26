@@ -1,7 +1,6 @@
 using login;
 using Microsoft.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using WindowsFormsApp3;
 
 namespace SE
 {
@@ -67,8 +66,8 @@ namespace SE
                         switch (UserInfo.Role)
                         {
                             case "Admin":
-                                //AdminDashboard adminDashboard = new AdminDashboard(userInfo);
-                                //adminDashboard.Show();
+                                AdminDashboard adminDashboard = new AdminDashboard(UserInfo);
+                                adminDashboard.Show();
                                 break;
                             case "Executive Council":
                                 //ExecutiveCouncilDashboard ecDashboard = new ExecutiveCouncilDashboard(userInfo);

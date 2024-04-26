@@ -9,45 +9,28 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 
-namespace WindowsFormsApp3
+namespace SE
 {
     public partial class AdminDashboard : Form
     {
-        public AdminDashboard()
+        private userInfo UserInfo;
+        public AdminDashboard(userInfo info)
         {
             InitializeComponent();
+
+            UserInfo = info;
+            usernameLabel.Text = "Welcome, " + UserInfo.Username;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void SocietyApprovalButton_Click(object sender, EventArgs e)
         {
+            SocietyApprovalAdmin societyApprovalAdmin = new SocietyApprovalAdmin(UserInfo);
+            societyApprovalAdmin.Show();
 
+            Visible = false;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form4 f4 = new Form4();
-            f4.Visible = true;
-            this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            AdminDashboard eventApproval = new AdminDashboard();
-            eventApproval.Visible = true;
-            this.Hide();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void ViewApprovedSocieties_Click(object sender, EventArgs e)
         {
 
         }

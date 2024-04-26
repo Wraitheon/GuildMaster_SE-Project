@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp3;
 
 namespace SE
 {
@@ -27,9 +26,9 @@ namespace SE
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminDashboard form = new AdminDashboard();
-            form.Visible = true;
-            this.Close();
+            //AdminDashboard form = new AdminDashboard();
+            //form.Visible = true;
+            //this.Close();
 
         }
 
@@ -41,7 +40,6 @@ namespace SE
         {
             const string connectionString = "Data Source=WRAITH\\SQLEXPRESS;Initial Catalog=software_engineering;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
 
-            //string connectionString = "Data Source=DESKTOP-G2GT2PU\\SQLEXPRESS;Initial Catalog=DB1;Integrated Security=True;";
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
