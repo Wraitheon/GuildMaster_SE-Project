@@ -12,23 +12,13 @@ namespace SE
 {
     public partial class ExecutiveCouncilDashboard : Form
     {
-        public ExecutiveCouncilDashboard()
+        private string username;
+        public ExecutiveCouncilDashboard(string username)
         {
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ScheduleEvent scheduleEvent = new ScheduleEvent();
-            scheduleEvent.Show();
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            eventBoard eventBoard = new eventBoard();
-            eventBoard.Show();
-            this.Close();
+            this.username = username;
+            usernameLabel.Text = "Welcome, " + username;
         }
     }
 }

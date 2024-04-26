@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SE
 {
     public partial class ScheduleEvent : Form
     {
+        private string username;
         public ScheduleEvent()
         {
             InitializeComponent();
@@ -60,7 +62,7 @@ namespace SE
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ExecutiveCouncilDashboard studentDash = new ExecutiveCouncilDashboard();
+            ExecutiveCouncilDashboard studentDash = new ExecutiveCouncilDashboard(username);
             studentDash.Show();
             this.Close();
         }

@@ -1,6 +1,6 @@
 ﻿namespace SE
 {
-    partial class ExecutiveCouncilDashboard
+    partial class StudentDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,62 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             panel1 = new Panel();
-            usernameLabel = new Label();
             button1 = new Button();
+            usernameLabel = new Label();
+            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Black;
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(usernameLabel);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(1, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(798, 451);
+            panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(83, 198);
+            button1.Name = "button1";
+            button1.Size = new Size(153, 29);
+            button1.TabIndex = 2;
+            button1.Text = "Register Society";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // usernameLabel
+            // 
+            usernameLabel.AutoSize = true;
+            usernameLabel.Font = new Font("Lucida Console", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            usernameLabel.ForeColor = Color.White;
+            usernameLabel.Location = new Point(311, 54);
+            usernameLabel.Name = "usernameLabel";
+            usernameLabel.Size = new Size(0, 17);
+            usernameLabel.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Lucida Sans Unicode", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(112, 17);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(197, 9);
             label1.Name = "label1";
-            label1.Size = new Size(572, 45);
+            label1.Size = new Size(381, 45);
             label1.TabIndex = 0;
-            label1.Text = "Executive Council Dashboard";
-            label1.TextAlign = ContentAlignment.TopCenter;
+            label1.Text = "Student Dashboard";
             // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.ActiveCaptionText;
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(usernameLabel);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(-1, 1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(801, 449);
-            panel1.TabIndex = 3;
-            // 
-            // usernameLabel
-            // 
-            usernameLabel.AutoSize = true;
-            usernameLabel.Font = new Font("Lucida Sans Unicode", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            usernameLabel.ForeColor = SystemColors.ButtonHighlight;
-            usernameLabel.Location = new Point(310, 62);
-            usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new Size(0, 21);
-            usernameLabel.TabIndex = 1;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(74, 177);
-            button1.Name = "button1";
-            button1.Size = new Size(198, 71);
-            button1.TabIndex = 2;
-            button1.Text = "Schedule Event";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // ExecutiveCouncilDashboard
+            // StudentDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            Name = "ExecutiveCouncilDashboard";
+            Name = "StudentDashboard";
             Text = "StudentDashboard";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -92,8 +92,8 @@
 
         #endregion
 
-        private Label label1;
         private Panel panel1;
+        private Label label1;
         private Label usernameLabel;
         private Button button1;
     }

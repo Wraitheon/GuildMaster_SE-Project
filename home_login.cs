@@ -36,7 +36,7 @@ namespace SE
 
             // Connect to the database and check user credentials
             string connectionString = "Data Source=WRAITH\\SQLEXPRESS;Initial Catalog=software_engineering;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
-            string query = "SELECT Role FROM Users WHERE Username = @Username AND Password = @Password";
+            string query = "SELECT userID, firstName, lastName, email, role FROM Users WHERE Username = @Username AND Password = @Password";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -48,36 +48,47 @@ namespace SE
                     command.Parameters.AddWithValue("@Password", password);
 
                     // Execute the query
-                    string role = (string)command.ExecuteScalar();
+                    SqlDataReader reader = command.ExecuteReader();
 
-                    if (string.IsNullOrEmpty(role))
+                    if (reader.Read())
                     {
-                        MessageBox.Show("Invalid username or password.");
-                    }
-                    else
-                    {
+                        // Create UserInfo object with retrieved information
+                        userInfo UserInfo = new userInfo(
+                            reader.GetInt32(0),
+                            reader.GetString(1),
+                            reader.GetString(2),
+                            username,
+                            password,
+                            reader.GetString(3),
+                            reader.GetString(4)
+                        );
+
                         // Show the appropriate dashboard based on the user's role
-                        switch (role)
+                        switch (UserInfo.Role)
                         {
                             case "Admin":
-                                AdminDashboard adminDashboard = new AdminDashboard();
-                                adminDashboard.Show();
+                                //AdminDashboard adminDashboard = new AdminDashboard(userInfo);
+                                //adminDashboard.Show();
                                 break;
                             case "Executive Council":
-                                ExecutiveCouncilDashboard ecDashboard = new ExecutiveCouncilDashboard();    
-                                ecDashboard.Show();
+                                //ExecutiveCouncilDashboard ecDashboard = new ExecutiveCouncilDashboard(userInfo);
+                                //ecDashboard.Show();
                                 break;
                             case "Student":
-                                //StudentDashboardForm studentDashboard = new StudentDashboardForm();
-                                //studentDashboard.Show();
+                                StudentDashboard studentDashboard = new StudentDashboard(UserInfo);
+                                studentDashboard.Show();
                                 break;
                             default:
-                                MessageBox.Show("Unknown role: " + role);
+                                MessageBox.Show("Unknown role: " + UserInfo.Role);
                                 break;
                         }
 
                         // Close the current login form
                         Visible = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password.");
                     }
                 }
             }
