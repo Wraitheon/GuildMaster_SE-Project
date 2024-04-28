@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            FeedbackButton = new Button();
             UpcomingEventsButton = new Button();
             ApplySocietyButton = new Button();
             button1 = new Button();
             usernameLabel = new Label();
             label1 = new Label();
-            AnnouncementsButton = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Black;
-            panel1.Controls.Add(AnnouncementsButton);
+            panel1.Controls.Add(FeedbackButton);
             panel1.Controls.Add(UpcomingEventsButton);
             panel1.Controls.Add(ApplySocietyButton);
             panel1.Controls.Add(button1);
@@ -51,6 +51,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(798, 451);
             panel1.TabIndex = 0;
+            // 
+            // FeedbackButton
+            // 
+            FeedbackButton.Location = new Point(311, 318);
+            FeedbackButton.Name = "FeedbackButton";
+            FeedbackButton.Size = new Size(183, 66);
+            FeedbackButton.TabIndex = 5;
+            FeedbackButton.Text = "Submit Event Feedback";
+            FeedbackButton.UseVisualStyleBackColor = true;
+            FeedbackButton.Click += FeedbackButton_Click;
             // 
             // UpcomingEventsButton
             // 
@@ -103,15 +113,6 @@
             label1.TabIndex = 0;
             label1.Text = "Student Dashboard";
             // 
-            // AnnouncementsButton
-            // 
-            AnnouncementsButton.Location = new Point(311, 318);
-            AnnouncementsButton.Name = "AnnouncementsButton";
-            AnnouncementsButton.Size = new Size(183, 66);
-            AnnouncementsButton.TabIndex = 5;
-            AnnouncementsButton.Text = "Announcements";
-            AnnouncementsButton.UseVisualStyleBackColor = true;
-            // 
             // StudentDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -133,6 +134,6 @@
         private Button button1;
         private Button ApplySocietyButton;
         private Button UpcomingEventsButton;
-        private Button AnnouncementsButton;
+        private Button FeedbackButton;
     }
 }

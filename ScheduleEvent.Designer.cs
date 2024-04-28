@@ -39,12 +39,15 @@
             eventDescription = new TextBox();
             button1 = new Button();
             button2 = new Button();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Black;
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(276, 41);
             label1.Name = "label1";
             label1.Size = new Size(216, 38);
@@ -55,7 +58,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Black;
             label2.Font = new Font("Microsoft Sans Serif", 8.25F);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(223, 130);
             label2.Name = "label2";
             label2.Size = new Size(85, 17);
@@ -65,6 +70,8 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Black;
+            label4.ForeColor = Color.White;
             label4.Location = new Point(223, 185);
             label4.Name = "label4";
             label4.Size = new Size(89, 20);
@@ -74,6 +81,8 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Black;
+            label5.ForeColor = Color.White;
             label5.Location = new Point(223, 237);
             label5.Name = "label5";
             label5.Size = new Size(81, 20);
@@ -83,6 +92,8 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Black;
+            label6.ForeColor = Color.White;
             label6.Location = new Point(223, 291);
             label6.Name = "label6";
             label6.Size = new Size(125, 20);
@@ -138,6 +149,14 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Black;
+            panel1.Location = new Point(-6, -6);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(811, 513);
+            panel1.TabIndex = 13;
+            // 
             // ScheduleEvent
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -154,6 +173,7 @@
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(panel1);
             Name = "ScheduleEvent";
             Text = "ScheduleEvent";
             ResumeLayout(false);
@@ -173,5 +193,6 @@
         private TextBox eventDescription;
         private Button button1;
         private Button button2;
+        private Panel panel1;
     }
 }

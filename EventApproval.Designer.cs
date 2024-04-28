@@ -33,13 +33,17 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Black;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(214, 20);
             label1.Name = "label1";
             label1.Size = new Size(371, 41);
@@ -58,7 +62,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(694, 20);
+            button1.Location = new Point(14, 14);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 2;
@@ -85,6 +89,15 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Black;
+            panel1.Controls.Add(button1);
+            panel1.Location = new Point(-2, -2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(806, 457);
+            panel1.TabIndex = 5;
+            // 
             // EventApproval
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -92,12 +105,13 @@
             ClientSize = new Size(800, 450);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
+            Controls.Add(panel1);
             Name = "EventApproval";
             Text = "EventApproval";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -109,5 +123,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Panel panel1;
     }
 }

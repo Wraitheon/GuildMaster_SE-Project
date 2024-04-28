@@ -52,5 +52,13 @@ namespace SE
 
             Visible = false;
         }
+
+        private void ViewFeedbackButton_Click(object sender, EventArgs e)
+        {
+            ViewFeedback viewFeedback = new ViewFeedback(UserInfo);
+            viewFeedback.Show();
+
+            Visible = false;
+        }
     }
 }

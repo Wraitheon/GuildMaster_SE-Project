@@ -45,5 +45,13 @@ namespace SE
 
             Visible = false;
         }
+
+        private void FeedbackButton_Click(object sender, EventArgs e)
+        {
+            SubmitFeedback submitFeedback = new SubmitFeedback(UserInfo);
+            submitFeedback.Show();
+
+            Visible = false;
+        }
     }
 }
