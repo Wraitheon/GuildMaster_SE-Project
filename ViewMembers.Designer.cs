@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
             dataGridView1 = new DataGridView();
+            label1 = new Label();
+            BackButton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -38,12 +39,22 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(BackButton);
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(-4, -4);
             panel1.Name = "panel1";
             panel1.Size = new Size(805, 458);
             panel1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(74, 105);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(664, 307);
+            dataGridView1.TabIndex = 1;
             // 
             // label1
             // 
@@ -57,14 +68,15 @@
             label1.Text = "View Society Members";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // dataGridView1
+            // BackButton
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(74, 105);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(664, 307);
-            dataGridView1.TabIndex = 1;
+            BackButton.Location = new Point(16, 16);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(94, 29);
+            BackButton.TabIndex = 2;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // ViewMembers
             // 
@@ -85,5 +97,6 @@
         private Panel panel1;
         private Label label1;
         private DataGridView dataGridView1;
+        private Button BackButton;
     }
 }

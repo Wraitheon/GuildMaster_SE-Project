@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
-            dataGridView1 = new DataGridView();
-            label2 = new Label();
-            comboBox1 = new ComboBox();
-            label3 = new Label();
-            textBox1 = new TextBox();
             SubmitFeedbackButton = new Button();
+            textBox1 = new TextBox();
+            label3 = new Label();
+            comboBox1 = new ComboBox();
+            label2 = new Label();
+            dataGridView1 = new DataGridView();
+            label1 = new Label();
+            BackButton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -43,6 +44,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(BackButton);
             panel1.Controls.Add(SubmitFeedbackButton);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label3);
@@ -55,45 +57,24 @@
             panel1.Size = new Size(807, 457);
             panel1.TabIndex = 0;
             // 
-            // label1
+            // SubmitFeedbackButton
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Lucida Sans Unicode", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(233, 32);
-            label1.Name = "label1";
-            label1.Size = new Size(348, 34);
-            label1.TabIndex = 0;
-            label1.Text = "Submit Event Feedback";
+            SubmitFeedbackButton.Location = new Point(352, 364);
+            SubmitFeedbackButton.Name = "SubmitFeedbackButton";
+            SubmitFeedbackButton.Size = new Size(94, 29);
+            SubmitFeedbackButton.TabIndex = 6;
+            SubmitFeedbackButton.Text = "Submit";
+            SubmitFeedbackButton.UseVisualStyleBackColor = true;
+            SubmitFeedbackButton.Click += SubmitFeedbackButton_Click;
             // 
-            // dataGridView1
+            // textBox1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(352, 124);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(411, 188);
-            dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(69, 287);
-            label2.Name = "label2";
-            label2.Size = new Size(52, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Rating";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(139, 284);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(187, 28);
-            comboBox1.TabIndex = 3;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            textBox1.Location = new Point(139, 124);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(187, 129);
+            textBox1.TabIndex = 5;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label3
             // 
@@ -105,24 +86,55 @@
             label3.TabIndex = 4;
             label3.Text = "Comments";
             // 
-            // textBox1
+            // comboBox1
             // 
-            textBox1.Location = new Point(139, 124);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(187, 129);
-            textBox1.TabIndex = 5;
-            textBox1.TextChanged += textBox1_TextChanged;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(139, 284);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(187, 28);
+            comboBox1.TabIndex = 3;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // SubmitFeedbackButton
+            // label2
             // 
-            SubmitFeedbackButton.Location = new Point(352, 364);
-            SubmitFeedbackButton.Name = "SubmitFeedbackButton";
-            SubmitFeedbackButton.Size = new Size(94, 29);
-            SubmitFeedbackButton.TabIndex = 6;
-            SubmitFeedbackButton.Text = "Submit";
-            SubmitFeedbackButton.UseVisualStyleBackColor = true;
-            SubmitFeedbackButton.Click += SubmitFeedbackButton_Click;
+            label2.AutoSize = true;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(69, 287);
+            label2.Name = "label2";
+            label2.Size = new Size(52, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Rating";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(352, 124);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(411, 188);
+            dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Lucida Sans Unicode", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(233, 32);
+            label1.Name = "label1";
+            label1.Size = new Size(348, 34);
+            label1.TabIndex = 0;
+            label1.Text = "Submit Event Feedback";
+            // 
+            // BackButton
+            // 
+            BackButton.Location = new Point(14, 15);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(94, 29);
+            BackButton.TabIndex = 7;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // SubmitFeedback
             // 
@@ -148,5 +160,6 @@
         private Label label3;
         private ComboBox comboBox1;
         private Label label2;
+        private Button BackButton;
     }
 }

@@ -96,5 +96,13 @@ namespace SE
                 MessageBox.Show("Please select a membership application to accept.");
             }
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            ExecutiveCouncilDashboard execdash = new ExecutiveCouncilDashboard(UserInfo);
+            execdash.Show();
+
+            Visible = false;
+        }
     }
 }

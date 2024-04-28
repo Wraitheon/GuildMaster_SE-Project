@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
-            dataGridView1 = new DataGridView();
             Accept = new Button();
+            dataGridView1 = new DataGridView();
+            label1 = new Label();
+            BackButton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -39,6 +40,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(BackButton);
             panel1.Controls.Add(Accept);
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(label1);
@@ -46,6 +48,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(813, 456);
             panel1.TabIndex = 0;
+            // 
+            // Accept
+            // 
+            Accept.Location = new Point(359, 391);
+            Accept.Name = "Accept";
+            Accept.Size = new Size(94, 29);
+            Accept.TabIndex = 2;
+            Accept.Text = "Accept";
+            Accept.UseVisualStyleBackColor = true;
+            Accept.Click += Accept_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(81, 105);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(664, 265);
+            dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 
@@ -58,25 +80,15 @@
             label1.TabIndex = 0;
             label1.Text = "Review Membership Applications";
             // 
-            // dataGridView1
+            // BackButton
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(81, 105);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(664, 265);
-            dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // Accept
-            // 
-            Accept.Location = new Point(359, 391);
-            Accept.Name = "Accept";
-            Accept.Size = new Size(94, 29);
-            Accept.TabIndex = 2;
-            Accept.Text = "Accept";
-            Accept.UseVisualStyleBackColor = true;
-            Accept.Click += Accept_Click;
+            BackButton.Location = new Point(23, 16);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(94, 29);
+            BackButton.TabIndex = 3;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // ReviewApplications
             // 
@@ -98,5 +110,6 @@
         private Label label1;
         private Button Accept;
         private DataGridView dataGridView1;
+        private Button BackButton;
     }
 }

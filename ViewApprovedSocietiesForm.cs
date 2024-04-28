@@ -13,9 +13,11 @@ namespace SE
 {
     public partial class ViewApprovedSocietiesForm : Form
     {
-        public ViewApprovedSocietiesForm()
+        private userInfo UserInfo;
+        public ViewApprovedSocietiesForm(userInfo userInfo)
         {
             InitializeComponent();
+            UserInfo = userInfo;
             LoadSocieties();
         }
 
@@ -69,9 +71,17 @@ namespace SE
                 }
                 else
                 {
-                    dv.RowFilter = string.Empty; // Clear the filter
+                    dv.RowFilter = string.Empty;
                 }
             }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            AdminDashboard adminDashboard = new AdminDashboard(UserInfo);
+            adminDashboard.Show();
+
+            Visible = false;
         }
     }
 }

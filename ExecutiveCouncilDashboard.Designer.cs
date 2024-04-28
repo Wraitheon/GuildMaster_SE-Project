@@ -30,6 +30,7 @@
         {
             label1 = new Label();
             panel1 = new Panel();
+            LogoutButton = new Button();
             ViewFeedbackButton = new Button();
             UpcomingEventsButton = new Button();
             ViewMembersButton = new Button();
@@ -44,7 +45,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Lucida Sans Unicode", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(112, 17);
+            label1.Location = new Point(104, 73);
             label1.Name = "label1";
             label1.Size = new Size(572, 45);
             label1.TabIndex = 0;
@@ -54,6 +55,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaptionText;
+            panel1.Controls.Add(LogoutButton);
             panel1.Controls.Add(ViewFeedbackButton);
             panel1.Controls.Add(UpcomingEventsButton);
             panel1.Controls.Add(ViewMembersButton);
@@ -65,6 +67,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(801, 449);
             panel1.TabIndex = 3;
+            // 
+            // LogoutButton
+            // 
+            LogoutButton.Location = new Point(13, 11);
+            LogoutButton.Name = "LogoutButton";
+            LogoutButton.Size = new Size(94, 29);
+            LogoutButton.TabIndex = 7;
+            LogoutButton.Text = "LogOut";
+            LogoutButton.UseVisualStyleBackColor = true;
+            LogoutButton.Click += LogoutButton_Click;
             // 
             // ViewFeedbackButton
             // 
@@ -149,5 +161,6 @@
         private Button ViewMembersButton;
         private Button ViewFeedbackButton;
         private Button UpcomingEventsButton;
+        private Button LogoutButton;
     }
 }

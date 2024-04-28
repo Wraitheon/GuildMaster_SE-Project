@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
+            ApplyButton = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
-            ApplyButton = new Button();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            BackButton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -41,6 +42,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(BackButton);
             panel1.Controls.Add(comboBox2);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(ApplyButton);
@@ -50,6 +52,34 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(803, 456);
             panel1.TabIndex = 0;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(419, 304);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(194, 28);
+            comboBox2.TabIndex = 4;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(171, 304);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(194, 28);
+            comboBox1.TabIndex = 3;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // ApplyButton
+            // 
+            ApplyButton.Location = new Point(348, 369);
+            ApplyButton.Name = "ApplyButton";
+            ApplyButton.Size = new Size(94, 29);
+            ApplyButton.TabIndex = 2;
+            ApplyButton.Text = "Apply";
+            ApplyButton.UseVisualStyleBackColor = true;
+            ApplyButton.Click += ApplyButton_Click;
             // 
             // dataGridView1
             // 
@@ -72,33 +102,15 @@
             label1.TabIndex = 0;
             label1.Text = "Apply To Society";
             // 
-            // ApplyButton
+            // BackButton
             // 
-            ApplyButton.Location = new Point(348, 369);
-            ApplyButton.Name = "ApplyButton";
-            ApplyButton.Size = new Size(94, 29);
-            ApplyButton.TabIndex = 2;
-            ApplyButton.Text = "Apply";
-            ApplyButton.UseVisualStyleBackColor = true;
-            ApplyButton.Click += ApplyButton_Click;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(171, 304);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(194, 28);
-            comboBox1.TabIndex = 3;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(419, 304);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(194, 28);
-            comboBox2.TabIndex = 4;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            BackButton.Location = new Point(13, 15);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(94, 29);
+            BackButton.TabIndex = 5;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // ApplyToSociety
             // 
@@ -122,5 +134,6 @@
         private Button ApplyButton;
         private ComboBox comboBox2;
         private ComboBox comboBox1;
+        private Button BackButton;
     }
 }

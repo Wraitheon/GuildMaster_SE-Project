@@ -57,5 +57,13 @@ namespace SE
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            ExecutiveCouncilDashboard executiveCouncilDashboard = new ExecutiveCouncilDashboard(UserInfo);
+            executiveCouncilDashboard.Show();
+
+            Visible = false;
+        }
     }
 }

@@ -53,5 +53,13 @@ namespace SE
 
             Visible = false;
         }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            home_login homelog = new home_login();
+            homelog.Show();
+
+            Visible = false;
+        }
     }
 }

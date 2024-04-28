@@ -32,7 +32,7 @@ namespace SE
 
         private void ViewApprovedSocieties_Click(object sender, EventArgs e)
         {
-            ViewApprovedSocietiesForm viewApprovedSocieties = new ViewApprovedSocietiesForm();
+            ViewApprovedSocietiesForm viewApprovedSocieties = new ViewApprovedSocietiesForm(UserInfo);
             viewApprovedSocieties.Show();
 
             Visible = false;
@@ -50,6 +50,14 @@ namespace SE
         {
             UpcomingEvents upcomingEvents = new UpcomingEvents(UserInfo);
             upcomingEvents.Show();
+
+            Visible = false;
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            home_login homelog = new home_login();
+            homelog.Show();
 
             Visible = false;
         }

@@ -35,6 +35,7 @@
             button3 = new Button();
             UpcomingEventsButton = new Button();
             panel1 = new Panel();
+            LogoutButton = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,11 +43,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Black;
-            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Lucida Sans Unicode", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(322, 35);
+            label1.Location = new Point(268, 72);
             label1.Name = "label1";
-            label1.Size = new Size(184, 25);
+            label1.Size = new Size(273, 34);
             label1.TabIndex = 0;
             label1.Text = "Admin Dashboard";
             // 
@@ -56,7 +57,7 @@
             usernameLabel.BackColor = Color.Black;
             usernameLabel.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             usernameLabel.ForeColor = Color.White;
-            usernameLabel.Location = new Point(365, 60);
+            usernameLabel.Location = new Point(336, 72);
             usernameLabel.Name = "usernameLabel";
             usernameLabel.Size = new Size(0, 20);
             usernameLabel.TabIndex = 1;
@@ -104,12 +105,23 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(LogoutButton);
             panel1.Controls.Add(usernameLabel);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(-2, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(831, 562);
             panel1.TabIndex = 6;
+            // 
+            // LogoutButton
+            // 
+            LogoutButton.Location = new Point(14, 12);
+            LogoutButton.Name = "LogoutButton";
+            LogoutButton.Size = new Size(94, 29);
+            LogoutButton.TabIndex = 2;
+            LogoutButton.Text = "LogOut";
+            LogoutButton.UseVisualStyleBackColor = true;
+            LogoutButton.Click += LogoutButton_Click;
             // 
             // AdminDashboard
             // 
@@ -137,6 +149,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button UpcomingEventsButton;
         private Panel panel1;
+        private Button LogoutButton;
     }
 }
 

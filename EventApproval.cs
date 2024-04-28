@@ -133,5 +133,13 @@ namespace SE
                 MessageBox.Show("Please select an event to delete.");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminDashboard admindash = new AdminDashboard(UserInfo);
+            admindash.Show();
+
+            Visible = false;
+        }
     }
 }

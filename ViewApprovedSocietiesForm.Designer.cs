@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            SearchButton = new Button();
             SearchTextBox = new TextBox();
             dataGridView1 = new DataGridView();
             label1 = new Label();
-            SearchButton = new Button();
+            BackButton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -40,6 +41,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(BackButton);
             panel1.Controls.Add(SearchButton);
             panel1.Controls.Add(SearchTextBox);
             panel1.Controls.Add(dataGridView1);
@@ -48,6 +50,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(811, 455);
             panel1.TabIndex = 0;
+            // 
+            // SearchButton
+            // 
+            SearchButton.Location = new Point(430, 93);
+            SearchButton.Name = "SearchButton";
+            SearchButton.Size = new Size(94, 27);
+            SearchButton.TabIndex = 4;
+            SearchButton.Text = "Search";
+            SearchButton.UseMnemonic = false;
+            SearchButton.UseVisualStyleBackColor = true;
+            SearchButton.Click += SearchButton_Click;
             // 
             // SearchTextBox
             // 
@@ -78,16 +91,15 @@
             label1.TabIndex = 0;
             label1.Text = "Approved Societies";
             // 
-            // SearchButton
+            // BackButton
             // 
-            SearchButton.Location = new Point(430, 93);
-            SearchButton.Name = "SearchButton";
-            SearchButton.Size = new Size(94, 27);
-            SearchButton.TabIndex = 4;
-            SearchButton.Text = "Search";
-            SearchButton.UseMnemonic = false;
-            SearchButton.UseVisualStyleBackColor = true;
-            SearchButton.Click += SearchButton_Click;
+            BackButton.Location = new Point(17, 12);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(94, 29);
+            BackButton.TabIndex = 5;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // ViewApprovedSocietiesForm
             // 
@@ -110,5 +122,6 @@
         private DataGridView dataGridView1;
         private Label label1;
         private Button SearchButton;
+        private Button BackButton;
     }
 }

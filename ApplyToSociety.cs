@@ -138,5 +138,13 @@ namespace SE
         {
 
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            StudentDashboard studentdash = new StudentDashboard(UserInfo);
+            studentdash.Show();
+
+            Visible = false;
+        }
     }
 }

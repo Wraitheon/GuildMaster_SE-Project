@@ -35,12 +35,14 @@
             button1 = new Button();
             usernameLabel = new Label();
             label1 = new Label();
+            LogoutButton = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(LogoutButton);
             panel1.Controls.Add(FeedbackButton);
             panel1.Controls.Add(UpcomingEventsButton);
             panel1.Controls.Add(ApplySocietyButton);
@@ -113,6 +115,16 @@
             label1.TabIndex = 0;
             label1.Text = "Student Dashboard";
             // 
+            // LogoutButton
+            // 
+            LogoutButton.Location = new Point(11, 12);
+            LogoutButton.Name = "LogoutButton";
+            LogoutButton.Size = new Size(94, 29);
+            LogoutButton.TabIndex = 6;
+            LogoutButton.Text = "Logout";
+            LogoutButton.UseVisualStyleBackColor = true;
+            LogoutButton.Click += LogoutButton_Click;
+            // 
             // StudentDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -135,5 +147,6 @@
         private Button ApplySocietyButton;
         private Button UpcomingEventsButton;
         private Button FeedbackButton;
+        private Button LogoutButton;
     }
 }
