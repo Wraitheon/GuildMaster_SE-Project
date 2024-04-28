@@ -30,8 +30,12 @@
         {
             label1 = new Label();
             panel1 = new Panel();
-            usernameLabel = new Label();
+            ViewMembersButton = new Button();
+            ReviewApplicationsButton = new Button();
             button1 = new Button();
+            usernameLabel = new Label();
+            UpcomingEventsButton = new Button();
+            CreateAnnouncementButton = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,6 +54,10 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaptionText;
+            panel1.Controls.Add(CreateAnnouncementButton);
+            panel1.Controls.Add(UpcomingEventsButton);
+            panel1.Controls.Add(ViewMembersButton);
+            panel1.Controls.Add(ReviewApplicationsButton);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(usernameLabel);
             panel1.Controls.Add(label1);
@@ -57,6 +65,36 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(801, 449);
             panel1.TabIndex = 3;
+            // 
+            // ViewMembersButton
+            // 
+            ViewMembersButton.Location = new Point(548, 177);
+            ViewMembersButton.Name = "ViewMembersButton";
+            ViewMembersButton.Size = new Size(198, 71);
+            ViewMembersButton.TabIndex = 4;
+            ViewMembersButton.Text = "View Members";
+            ViewMembersButton.UseVisualStyleBackColor = true;
+            ViewMembersButton.Click += ViewMembersButton_Click;
+            // 
+            // ReviewApplicationsButton
+            // 
+            ReviewApplicationsButton.Location = new Point(310, 177);
+            ReviewApplicationsButton.Name = "ReviewApplicationsButton";
+            ReviewApplicationsButton.Size = new Size(198, 71);
+            ReviewApplicationsButton.TabIndex = 3;
+            ReviewApplicationsButton.Text = "ReviewApplications";
+            ReviewApplicationsButton.UseVisualStyleBackColor = true;
+            ReviewApplicationsButton.Click += ReviewApplicationsButton_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(74, 177);
+            button1.Name = "button1";
+            button1.Size = new Size(198, 71);
+            button1.TabIndex = 2;
+            button1.Text = "Schedule Event";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // usernameLabel
             // 
@@ -68,14 +106,24 @@
             usernameLabel.Size = new Size(0, 21);
             usernameLabel.TabIndex = 1;
             // 
-            // button1
+            // UpcomingEventsButton
             // 
-            button1.Location = new Point(74, 177);
-            button1.Name = "button1";
-            button1.Size = new Size(198, 71);
-            button1.TabIndex = 2;
-            button1.Text = "Schedule Event";
-            button1.UseVisualStyleBackColor = true;
+            UpcomingEventsButton.Location = new Point(197, 289);
+            UpcomingEventsButton.Name = "UpcomingEventsButton";
+            UpcomingEventsButton.Size = new Size(198, 71);
+            UpcomingEventsButton.TabIndex = 5;
+            UpcomingEventsButton.Text = "Upcoming Events";
+            UpcomingEventsButton.UseVisualStyleBackColor = true;
+            UpcomingEventsButton.Click += UpcomingEventsButton_Click;
+            // 
+            // CreateAnnouncementButton
+            // 
+            CreateAnnouncementButton.Location = new Point(432, 289);
+            CreateAnnouncementButton.Name = "CreateAnnouncementButton";
+            CreateAnnouncementButton.Size = new Size(198, 71);
+            CreateAnnouncementButton.TabIndex = 6;
+            CreateAnnouncementButton.Text = "Create Announcement";
+            CreateAnnouncementButton.UseVisualStyleBackColor = true;
             // 
             // ExecutiveCouncilDashboard
             // 
@@ -96,5 +144,9 @@
         private Panel panel1;
         private Label usernameLabel;
         private Button button1;
+        private Button ReviewApplicationsButton;
+        private Button ViewMembersButton;
+        private Button CreateAnnouncementButton;
+        private Button UpcomingEventsButton;
     }
 }

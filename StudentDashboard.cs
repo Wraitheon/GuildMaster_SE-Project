@@ -37,5 +37,13 @@ namespace SE
 
             Visible = false;
         }
+
+        private void UpcomingEventsButton_Click(object sender, EventArgs e)
+        {
+            UpcomingEvents upcomingEvents = new UpcomingEvents(UserInfo);
+            upcomingEvents.Show();
+
+            Visible = false;
+        }
     }
 }

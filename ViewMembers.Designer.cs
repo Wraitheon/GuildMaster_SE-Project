@@ -1,6 +1,6 @@
 ﻿namespace SE
 {
-    partial class EventApproval
+    partial class ViewMembers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,86 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panel1 = new Panel();
             label1 = new Label();
             dataGridView1 = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Black;
+            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(-4, -4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(805, 458);
+            panel1.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(214, 20);
+            label1.Font = new Font("Lucida Sans Unicode", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(220, 46);
             label1.Name = "label1";
-            label1.Size = new Size(371, 41);
+            label1.Size = new Size(337, 34);
             label1.TabIndex = 0;
-            label1.Text = "Pending Event Approvals";
+            label1.Text = "View Society Members";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(108, 100);
+            dataGridView1.Location = new Point(74, 105);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(588, 216);
+            dataGridView1.Size = new Size(664, 307);
             dataGridView1.TabIndex = 1;
             // 
-            // button1
-            // 
-            button1.Location = new Point(694, 20);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 2;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(214, 359);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 3;
-            button2.Text = "Approve";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(491, 359);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 4;
-            button3.Text = "Reject";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // EventApproval
+            // ViewMembers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
-            Controls.Add(label1);
-            Name = "EventApproval";
-            Text = "EventApproval";
+            Controls.Add(panel1);
+            Name = "ViewMembers";
+            Text = "ViewMembers";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
+        private Panel panel1;
         private Label label1;
         private DataGridView dataGridView1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
     }
 }

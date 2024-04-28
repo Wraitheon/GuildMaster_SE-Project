@@ -70,8 +70,8 @@ namespace SE
                                 adminDashboard.Show();
                                 break;
                             case "Executive Council":
-                                //ExecutiveCouncilDashboard ecDashboard = new ExecutiveCouncilDashboard(userInfo);
-                                //ecDashboard.Show();
+                                ExecutiveCouncilDashboard ecDashboard = new ExecutiveCouncilDashboard(UserInfo);
+                                ecDashboard.Show();
                                 break;
                             case "Student":
                                 StudentDashboard studentDashboard = new StudentDashboard(UserInfo);

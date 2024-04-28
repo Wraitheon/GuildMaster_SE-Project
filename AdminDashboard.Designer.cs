@@ -33,7 +33,7 @@
             SocietyApprovalButton = new Button();
             ViewApprovedSocieties = new Button();
             button3 = new Button();
-            button4 = new Button();
+            UpcomingEventsButton = new Button();
             panel1 = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -91,14 +91,15 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // button4
+            // UpcomingEventsButton
             // 
-            button4.Location = new Point(320, 279);
-            button4.Name = "button4";
-            button4.Size = new Size(187, 45);
-            button4.TabIndex = 5;
-            button4.Text = "Announcements";
-            button4.UseVisualStyleBackColor = true;
+            UpcomingEventsButton.Location = new Point(320, 279);
+            UpcomingEventsButton.Name = "UpcomingEventsButton";
+            UpcomingEventsButton.Size = new Size(187, 45);
+            UpcomingEventsButton.TabIndex = 5;
+            UpcomingEventsButton.Text = "Upcoming Events";
+            UpcomingEventsButton.UseVisualStyleBackColor = true;
+            UpcomingEventsButton.Click += UpcomingEventsButton_Click;
             // 
             // panel1
             // 
@@ -115,7 +116,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(828, 560);
-            Controls.Add(button4);
+            Controls.Add(UpcomingEventsButton);
             Controls.Add(button3);
             Controls.Add(ViewApprovedSocieties);
             Controls.Add(SocietyApprovalButton);
@@ -134,7 +135,7 @@
         private System.Windows.Forms.Button SocietyApprovalButton;
         private System.Windows.Forms.Button ViewApprovedSocieties;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button UpcomingEventsButton;
         private Panel panel1;
     }
 }

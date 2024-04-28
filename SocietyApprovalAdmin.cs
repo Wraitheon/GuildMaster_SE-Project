@@ -75,16 +75,27 @@ namespace SE
                     {
                         connection.Open();
 
-                        string query = "UPDATE Society SET societyApproved = 1 WHERE societyID = @societyID";
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.Parameters.AddWithValue("@societyID", societyID);
+                        string societyQuery = "UPDATE Society SET societyApproved = 1 WHERE societyID = @societyID";
+                        SqlCommand societyCommand = new SqlCommand(societyQuery, connection);
+                        societyCommand.Parameters.AddWithValue("@societyID", societyID);
+                        int societyRowsAffected = societyCommand.ExecuteNonQuery();
 
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
+                        if (societyRowsAffected > 0)
                         {
-                            MessageBox.Show("Society approved successfully.");
-                            LoadSocietyRequests();
+                            string userQuery = "UPDATE Users SET role = 'Executive Council' WHERE userID = (SELECT societyPresidentID FROM Society WHERE societyID = @societyID)";
+                            SqlCommand userCommand = new SqlCommand(userQuery, connection);
+                            userCommand.Parameters.AddWithValue("@societyID", societyID);
+                            int userRowsAffected = userCommand.ExecuteNonQuery();
+
+                            if (userRowsAffected > 0)
+                            {
+                                MessageBox.Show("Society approved successfully. User role changed to 'Executive Council'.");
+                                LoadSocietyRequests();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Failed to update user role.");
+                            }
                         }
                         else
                         {

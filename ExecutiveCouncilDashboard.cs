@@ -12,13 +12,45 @@ namespace SE
 {
     public partial class ExecutiveCouncilDashboard : Form
     {
-        private string username;
-        public ExecutiveCouncilDashboard(string username)
+        private userInfo UserInfo;
+        public ExecutiveCouncilDashboard(userInfo userInfo)
         {
             InitializeComponent();
 
-            this.username = username;
-            usernameLabel.Text = "Welcome, " + username;
+            UserInfo = userInfo;
+            usernameLabel.Text = "Welcome, " + UserInfo.Username;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ScheduleEvent scheduleEvent = new ScheduleEvent(UserInfo);
+            scheduleEvent.Show();
+
+            Visible = false;
+        }
+
+        private void ReviewApplicationsButton_Click(object sender, EventArgs e)
+        {
+            ReviewApplications review = new ReviewApplications(UserInfo);
+            review.Show();
+
+            Visible = false;
+        }
+
+        private void ViewMembersButton_Click(object sender, EventArgs e)
+        {
+            ViewMembers viewMembers = new ViewMembers(UserInfo);
+            viewMembers.Show();
+
+            Visible = false;
+        }
+
+        private void UpcomingEventsButton_Click(object sender, EventArgs e)
+        {
+            UpcomingEvents upcomingEvents = new UpcomingEvents(UserInfo);
+            upcomingEvents.Show();
+
+            Visible = false;
         }
     }
 }

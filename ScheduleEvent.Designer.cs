@@ -30,12 +30,10 @@
         {
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
             eventName = new TextBox();
-            eventSociety = new TextBox();
             eventVenue = new TextBox();
             eventDate = new DateTimePicker();
             eventDescription = new TextBox();
@@ -64,19 +62,10 @@
             label2.TabIndex = 1;
             label2.Text = "Event Name";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(223, 173);
-            label3.Name = "label3";
-            label3.Size = new Size(97, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Event Society";
-            // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(223, 224);
+            label4.Location = new Point(223, 185);
             label4.Name = "label4";
             label4.Size = new Size(89, 20);
             label4.TabIndex = 3;
@@ -85,7 +74,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(223, 276);
+            label5.Location = new Point(223, 237);
             label5.Name = "label5";
             label5.Size = new Size(81, 20);
             label5.TabIndex = 4;
@@ -94,7 +83,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(223, 330);
+            label6.Location = new Point(223, 291);
             label6.Name = "label6";
             label6.Size = new Size(125, 20);
             label6.TabIndex = 5;
@@ -107,30 +96,23 @@
             eventName.Size = new Size(125, 27);
             eventName.TabIndex = 6;
             // 
-            // eventSociety
-            // 
-            eventSociety.Location = new Point(367, 170);
-            eventSociety.Name = "eventSociety";
-            eventSociety.Size = new Size(125, 27);
-            eventSociety.TabIndex = 7;
-            // 
             // eventVenue
             // 
-            eventVenue.Location = new Point(367, 217);
+            eventVenue.Location = new Point(367, 178);
             eventVenue.Name = "eventVenue";
             eventVenue.Size = new Size(125, 27);
             eventVenue.TabIndex = 8;
             // 
             // eventDate
             // 
-            eventDate.Location = new Point(367, 271);
+            eventDate.Location = new Point(367, 232);
             eventDate.Name = "eventDate";
             eventDate.Size = new Size(238, 27);
             eventDate.TabIndex = 9;
             // 
             // eventDescription
             // 
-            eventDescription.Location = new Point(367, 330);
+            eventDescription.Location = new Point(367, 291);
             eventDescription.Multiline = true;
             eventDescription.Name = "eventDescription";
             eventDescription.Size = new Size(325, 108);
@@ -138,7 +120,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(352, 461);
+            button1.Location = new Point(345, 433);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 11;
@@ -166,12 +148,10 @@
             Controls.Add(eventDescription);
             Controls.Add(eventDate);
             Controls.Add(eventVenue);
-            Controls.Add(eventSociety);
             Controls.Add(eventName);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "ScheduleEvent";
@@ -184,12 +164,10 @@
 
         private Label label1;
         private Label label2;
-        private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
         private TextBox eventName;
-        private TextBox eventSociety;
         private TextBox eventVenue;
         private DateTimePicker eventDate;
         private TextBox eventDescription;

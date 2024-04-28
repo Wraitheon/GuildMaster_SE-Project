@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            UpcomingEventsButton = new Button();
+            ApplySocietyButton = new Button();
             button1 = new Button();
             usernameLabel = new Label();
             label1 = new Label();
-            ApplySocietyButton = new Button();
+            AnnouncementsButton = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(AnnouncementsButton);
+            panel1.Controls.Add(UpcomingEventsButton);
             panel1.Controls.Add(ApplySocietyButton);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(usernameLabel);
@@ -48,11 +52,31 @@
             panel1.Size = new Size(798, 451);
             panel1.TabIndex = 0;
             // 
+            // UpcomingEventsButton
+            // 
+            UpcomingEventsButton.Location = new Point(531, 198);
+            UpcomingEventsButton.Name = "UpcomingEventsButton";
+            UpcomingEventsButton.Size = new Size(183, 66);
+            UpcomingEventsButton.TabIndex = 4;
+            UpcomingEventsButton.Text = "Upcoming Events";
+            UpcomingEventsButton.UseVisualStyleBackColor = true;
+            UpcomingEventsButton.Click += UpcomingEventsButton_Click;
+            // 
+            // ApplySocietyButton
+            // 
+            ApplySocietyButton.Location = new Point(311, 198);
+            ApplySocietyButton.Name = "ApplySocietyButton";
+            ApplySocietyButton.Size = new Size(183, 66);
+            ApplySocietyButton.TabIndex = 3;
+            ApplySocietyButton.Text = "Apply to Society";
+            ApplySocietyButton.UseVisualStyleBackColor = true;
+            ApplySocietyButton.Click += ApplySocietyButton_Click;
+            // 
             // button1
             // 
             button1.Location = new Point(83, 198);
             button1.Name = "button1";
-            button1.Size = new Size(153, 29);
+            button1.Size = new Size(183, 66);
             button1.TabIndex = 2;
             button1.Text = "Register Society";
             button1.UseVisualStyleBackColor = true;
@@ -79,15 +103,14 @@
             label1.TabIndex = 0;
             label1.Text = "Student Dashboard";
             // 
-            // ApplySocietyButton
+            // AnnouncementsButton
             // 
-            ApplySocietyButton.Location = new Point(300, 198);
-            ApplySocietyButton.Name = "ApplySocietyButton";
-            ApplySocietyButton.Size = new Size(170, 29);
-            ApplySocietyButton.TabIndex = 3;
-            ApplySocietyButton.Text = "Apply to Society";
-            ApplySocietyButton.UseVisualStyleBackColor = true;
-            ApplySocietyButton.Click += ApplySocietyButton_Click;
+            AnnouncementsButton.Location = new Point(311, 318);
+            AnnouncementsButton.Name = "AnnouncementsButton";
+            AnnouncementsButton.Size = new Size(183, 66);
+            AnnouncementsButton.TabIndex = 5;
+            AnnouncementsButton.Text = "Announcements";
+            AnnouncementsButton.UseVisualStyleBackColor = true;
             // 
             // StudentDashboard
             // 
@@ -109,5 +132,7 @@
         private Label usernameLabel;
         private Button button1;
         private Button ApplySocietyButton;
+        private Button UpcomingEventsButton;
+        private Button AnnouncementsButton;
     }
 }
