@@ -32,12 +32,14 @@
             button1 = new Button();
             usernameLabel = new Label();
             label1 = new Label();
+            ApplySocietyButton = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(ApplySocietyButton);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(usernameLabel);
             panel1.Controls.Add(label1);
@@ -77,6 +79,16 @@
             label1.TabIndex = 0;
             label1.Text = "Student Dashboard";
             // 
+            // ApplySocietyButton
+            // 
+            ApplySocietyButton.Location = new Point(300, 198);
+            ApplySocietyButton.Name = "ApplySocietyButton";
+            ApplySocietyButton.Size = new Size(170, 29);
+            ApplySocietyButton.TabIndex = 3;
+            ApplySocietyButton.Text = "Apply to Society";
+            ApplySocietyButton.UseVisualStyleBackColor = true;
+            ApplySocietyButton.Click += ApplySocietyButton_Click;
+            // 
             // StudentDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -96,5 +108,6 @@
         private Label label1;
         private Label usernameLabel;
         private Button button1;
+        private Button ApplySocietyButton;
     }
 }

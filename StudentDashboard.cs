@@ -29,5 +29,13 @@ namespace SE
 
             Visible = false;
         }
+
+        private void ApplySocietyButton_Click(object sender, EventArgs e)
+        {
+            ApplyToSociety applyToSocietyForm = new ApplyToSociety(UserInfo);
+            applyToSocietyForm.Show();
+
+            Visible = false;
+        }
     }
 }

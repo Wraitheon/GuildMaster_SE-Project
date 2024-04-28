@@ -1,6 +1,6 @@
 ﻿namespace SE
 {
-    partial class ViewApprovedSocietiesForm
+    partial class ApplyToSociety
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            SearchTextBox = new TextBox();
             dataGridView1 = new DataGridView();
             label1 = new Label();
-            SearchButton = new Button();
+            ApplyButton = new Button();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -40,30 +41,23 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
-            panel1.Controls.Add(SearchButton);
-            panel1.Controls.Add(SearchTextBox);
+            panel1.Controls.Add(comboBox2);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(ApplyButton);
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(-5, 0);
+            panel1.Location = new Point(-1, -3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(811, 455);
+            panel1.Size = new Size(803, 456);
             panel1.TabIndex = 0;
-            // 
-            // SearchTextBox
-            // 
-            SearchTextBox.Location = new Point(280, 93);
-            SearchTextBox.Name = "SearchTextBox";
-            SearchTextBox.Size = new Size(144, 27);
-            SearchTextBox.TabIndex = 3;
-            SearchTextBox.TextChanged += SearchTextBox_TextChanged;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(44, 149);
+            dataGridView1.Location = new Point(92, 77);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(726, 278);
+            dataGridView1.Size = new Size(622, 192);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -72,31 +66,48 @@
             label1.AutoSize = true;
             label1.Font = new Font("Lucida Sans Unicode", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(256, 29);
+            label1.Location = new Point(269, 26);
             label1.Name = "label1";
-            label1.Size = new Size(291, 34);
+            label1.Size = new Size(257, 34);
             label1.TabIndex = 0;
-            label1.Text = "Approved Societies";
+            label1.Text = "Apply To Society";
             // 
-            // SearchButton
+            // ApplyButton
             // 
-            SearchButton.Location = new Point(430, 93);
-            SearchButton.Name = "SearchButton";
-            SearchButton.Size = new Size(94, 27);
-            SearchButton.TabIndex = 4;
-            SearchButton.Text = "Search";
-            SearchButton.UseMnemonic = false;
-            SearchButton.UseVisualStyleBackColor = true;
-            SearchButton.Click += SearchButton_Click;
+            ApplyButton.Location = new Point(348, 369);
+            ApplyButton.Name = "ApplyButton";
+            ApplyButton.Size = new Size(94, 29);
+            ApplyButton.TabIndex = 2;
+            ApplyButton.Text = "Apply";
+            ApplyButton.UseVisualStyleBackColor = true;
+            ApplyButton.Click += ApplyButton_Click;
             // 
-            // ViewApprovedSocietiesForm
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(171, 304);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(194, 28);
+            comboBox1.TabIndex = 3;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(419, 304);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(194, 28);
+            comboBox2.TabIndex = 4;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // ApplyToSociety
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            Name = "ViewApprovedSocietiesForm";
-            Text = "ViewApprovedSocietiesForm";
+            Name = "ApplyToSociety";
+            Text = "ApplyToSociety";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -106,9 +117,10 @@
         #endregion
 
         private Panel panel1;
-        private TextBox SearchTextBox;
-        private DataGridView dataGridView1;
         private Label label1;
-        private Button SearchButton;
+        private DataGridView dataGridView1;
+        private Button ApplyButton;
+        private ComboBox comboBox2;
+        private ComboBox comboBox1;
     }
 }

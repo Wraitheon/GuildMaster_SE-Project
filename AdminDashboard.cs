@@ -32,7 +32,18 @@ namespace SE
 
         private void ViewApprovedSocieties_Click(object sender, EventArgs e)
         {
+            ViewApprovedSocietiesForm viewApprovedSocieties = new ViewApprovedSocietiesForm();
+            viewApprovedSocieties.Show();
 
+            Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EventApproval eventApproval = new EventApproval(UserInfo);
+            eventApproval.Show();
+
+            Visible = false;
         }
     }
 }

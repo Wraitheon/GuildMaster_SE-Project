@@ -13,10 +13,12 @@ namespace SE
 {
     public partial class EventApproval : Form
     {
-        public EventApproval()
+        private userInfo UserInfo;
+        public EventApproval(userInfo userInfo)
         {
             InitializeComponent();
             loadEventApprovals();
+            UserInfo = userInfo;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -26,9 +28,10 @@ namespace SE
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //AdminDashboard form = new AdminDashboard();
-            //form.Visible = true;
-            //this.Close();
+            AdminDashboard adminDashboard = new AdminDashboard(UserInfo);
+            adminDashboard.Show();
+
+            Visible = false;
 
         }
 
